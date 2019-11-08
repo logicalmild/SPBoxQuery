@@ -28,5 +28,6 @@
     
 </body>
 
+    <script src="https://logicalmild.github.io/SPBoxQuery/js/SPBoxQuery.js"></script>
 
 </html>
