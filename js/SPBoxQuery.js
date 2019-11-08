@@ -5,7 +5,7 @@
 
         $(document).ready(function(){
 
-            LoadHTML('Layout');
+            LoadHTML('body','Layout');
             LoadJS('GetList');
             
             $('#SiteTitle').text(SiteTitle);
@@ -14,7 +14,7 @@
 
         });
 
-        function LoadHTML(component){
+        function LoadHTML(selector,component){
             var Url = 'https://logicalmild.github.io/SP-Terminal/component/'+component+'/'+component+'.html';
             $.ajax({ type: "GET",   
                 url: Url,
@@ -22,17 +22,14 @@
                 success : function(text)
                 {
                     response= text;
+                    $(selector).append(response);
                 
                 },
                 error: function(err){
-                    Load('#AppZone' ,MappingPage[1].Url); // Home
+                    
                 },
             
                 });
-            
-            // $(Elem).empty();
-            $(Elem).append(response);
-
         }
         function LoadJS(module){
             var Url = 'https://logicalmild.github.io/SP-Terminal/module/'+module+'/'+module+'.js';
