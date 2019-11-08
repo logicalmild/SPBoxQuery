@@ -16,7 +16,7 @@
     <script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
     <script type="text/javascript" src="/_layouts/15/sp.js"></script>
     <script type="text/javascript" src="https://logicalmild.github.io/SPGuide/SPGuide.js"></script>
- 
+    <link href="https://logicalmild.github.io/SPBoxQuery/css/SPBoxQuery.css" rel="stylesheet"/>
     
 </head>
 
