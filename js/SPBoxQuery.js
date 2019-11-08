@@ -7,6 +7,8 @@
 
             LoadHTML('body','layout');
             LoadJS('GetList');
+            LoadJS('GetAPI');
+            LoadJS('SiteInfo');
             
             $('#SiteTitle').text(SiteTitle);
             
