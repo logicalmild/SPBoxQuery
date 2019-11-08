@@ -5,7 +5,7 @@
 
         $(document).ready(function(){
 
-            LoadHTML('body','Layout');
+            LoadHTML('body','layout');
             LoadJS('GetList');
             
             $('#SiteTitle').text(SiteTitle);
