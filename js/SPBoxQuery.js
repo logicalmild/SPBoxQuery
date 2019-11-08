@@ -15,7 +15,7 @@
         });
 
         function LoadHTML(component){
-            var Url = 'https://logicalmild.github.io/SP-Terminal/component/'+component+'/'+component+'.js';
+            var Url = 'https://logicalmild.github.io/SP-Terminal/component/'+component+'/'+component+'.html';
             $.ajax({ type: "GET",   
                 url: Url,
                 async: false,
