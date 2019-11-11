@@ -12,7 +12,8 @@
             
             $('#SiteTitle').text(SiteTitle);
             
-            
+            //Start
+            GetList();
 
         });
 
