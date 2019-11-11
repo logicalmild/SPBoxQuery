@@ -16,6 +16,11 @@
 
         });
 
+        $('button').click(function(){
+            var objDiv = document.getElementById("DisplayResult");
+            objDiv.scrollTop = objDiv.scrollHeight;
+        });
+
         function LoadHTML(selector,component){
             var Url = 'https://logicalmild.github.io/SPBoxQuery/component/'+component+'/'+component+'.html';
             $.ajax({ type: "GET",   
