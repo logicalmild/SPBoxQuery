@@ -9,12 +9,10 @@
             LoadJS('GetList');
             LoadJS('GetAPI');
             LoadJS('SiteInfo');
-            
             $('#SiteTitle').text(SiteTitle);
-            
-            //Start
-            GetList();
 
+            LoadJS('Initial');
+            
         });
 
         $('button').click(function(){
