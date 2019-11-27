@@ -9,7 +9,9 @@ function SelectItem(mode){
         Query = '?$select=*&$top=100';
             
     }else{
-        
+        var str = 'Please input list name.';
+        str += '<p style="color:red;">'+str+'</p>';
+        $('#DisplayResult').append(str);
     }
 
     
