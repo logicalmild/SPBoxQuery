@@ -44,13 +44,15 @@ function SelectItem(mode){
             {      
                 data = data.d.results; 
                 text+='<table>';
-                
+                text+='<tr>';
                 for(i in data){
-                    text+='<tr>';
-                    text+='<th>'+data[i]+'</th>';
-                    text+='</tr>';
-                    
-                }               
+                    var col = '';
+                    for(j in data[i]){
+                        col = j;
+                    }
+                    text+='<th>'+col+'</th>';
+                }  
+                text+='</tr>';             
                 for(i in data){
                     text+='<tr>';
                     var d1 = data[i]
