@@ -15,30 +15,28 @@ function GetColumn(){
                 data = data.d.results;
                 text = '<br>';
                 var count = 0;
+                text += '<table>';
+                text += '   <tr>';
+                text += '       <td>No</td>';
+                text += '       <td>Internal Name</td>';
+                text += '       <td>Display name</td>';
+                text += '       <td>Type</td>';
+                text += '       <td>Required</td>';
+                text += '   </tr>';
                 for(i in data){
                     if(data[i].FromBaseType == false){
                         count = count+1;
-                        text += '<table>';
-                        text += '   <tr>';
-                        text += '       <td>No</td>';
-                        text += '       <td>Internal Name</td>';
-                        text += '       <td>Display name</td>';
-                        text += '       <td>Type</td>';
-                        text += '       <td>Required</td>';
-                        text += '   </tr>';
                         text += '   <tr>';
                         text += '       <td>'+ count +') '+'</td>';
                         text += '       <td>'+data[i].InternalName+'</td>';
                         text += '       <td>'+ data[i].Title +'</td>';
-                        text += '       <td>'+ data[i].TypeDisplayname +'</td>';
+                        text += '       <td>'+ data[i].TypeDisplayName +'</td>';
                         text += '       <td>'+ data[i].Required +'</td>';
-                        text += '   </tr>';
-                        text += '</table>';
-                
-                        
+                        text += '   </tr>';  
                     }
                     
                 }
+                text += '</table>';
                 $('#DisplayResult').append(text);
                 // Writeline();
             },
