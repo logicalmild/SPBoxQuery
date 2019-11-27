@@ -4,6 +4,7 @@ function Execute(){
     if(!Query){
         var err = 'Command is not found';
         err = '<p style="color:red;">'+err+'</p>';
+        $('#DisplayResult').empty();
         $('#DisplayResult').append(err);
     }else{
         var text='';
@@ -51,12 +52,14 @@ function Execute(){
                
                 text+='</table>';
                 
+                $('#DisplayResult').empty();
                 $('#DisplayResult').append(text);
                     
             },
             error: function ajaxError(response) {
                 var err = response.status + ' ' + response.statusText;
                 err = '<p style="color:red;">'+err+'</p>';
+                $('#DisplayResult').empty();
                 $('#DisplayResult').append(err);
             }
         });
