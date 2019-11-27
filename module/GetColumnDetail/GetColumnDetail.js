@@ -1,4 +1,4 @@
-function GetColumn(){
+function GetColumnDetail(){
     var command = $('#QueryInput').val();
 
     if(command){
