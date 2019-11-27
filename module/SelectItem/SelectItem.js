@@ -19,8 +19,6 @@ function SelectItem(mode){
 
     if(process == true){
         var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('"+list+"')/items" + Query;
-        $('#QueryInput').val('');
-        $('#QueryInput').val(requestUri);
         var requestHeaders = {
         "accept": "application/json;odata=verbose"
         }
@@ -72,7 +70,10 @@ function SelectItem(mode){
                 
             },
             error: function ajaxError(response) {
-                console.log(response.status + ' ' + response.statusText);
+                err = response.status + ' ' + response.statusText;
+                $('#DisplayResult').empty();
+                $('#DisplayResult').append(err);
+                    
             }
         });
     
