@@ -18,7 +18,22 @@ function GetColumn(){
                 for(i in data){
                     count = count+1;
                     text += '<br>'+ count +') ' +data[i].InternalName+ ': <br>'
+                    for(j in data[i]){
+                        var field = data[i];
+                        debugger;
+                        text += j+' :&#09&#09 '+ field[j] +'<br>'; 
+                    }
                 }
+          
+                // text = JSON.stringify(data, null , 3);
+                // text = text.replace(/"/g,'');
+                // text = text.replace(/,/g,'<br>');
+                // text = text.replace(/{/g,'');
+                // text = text.replace(/}/g,'<br>');
+                // text = text.replace(/:/g,'');
+                // text = text.replace(/__deferred/g,'');
+                // text = text.replace(/uri/g,'=>');
+                // text = text.replace(/__metadata/g,'');
                 $('#DisplayResult').append(text);
                 // Writeline();
             },
