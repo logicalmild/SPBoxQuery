@@ -1,4 +1,59 @@
-function SelectItem(){
+function SelectItem(mode){
+    
+    var list = $('#QueryInput').val();
+    var process = false;
+    var Query = '';
+    if(list){
+        process = true;
+        switch(mode){
+            case 'All':
+                        Query = '?$select=*&$top=50000';
+                        break;
+    
+            case 100:
+                        Query = '?$select=*&$top=100';
+                        break;
+            case 1000:
+                        Query = '?$select=*&$top=1000';
+                        break;
+            case 10000:
+                        Query = '?$select=*&$top=10000';
+                        break;
+        }
+    }else{
+        $('#DisplayResult').append('<br>Input List name<br>');
+    }
 
     
+
+    if(process == true){
+        var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('"+list+"')/items" + Query;
+        var requestHeaders = {
+        "accept": "application/json;odata=verbose"
+        }
+
+    
+        $.ajax({
+            url: requestUri,
+            type: 'GET',
+            dataType: 'json',
+            async: false,
+            headers: requestHeaders,
+            success: function (data) 
+            {      
+                data = data.d.results; 
+                extr_Data = data;
+                
+            },
+            error: function ajaxError(response) {
+                console.log(response.status + ' ' + response.statusText);
+            }
+        });
+    
+   
+    }
+
+
+    
+
 }
