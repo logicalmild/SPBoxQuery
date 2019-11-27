@@ -18,7 +18,24 @@ function GetColumn(){
                 for(i in data){
                     if(data[i].FromBaseType == false){
                         count = count+1;
-                        text += '<br>'+ count +') Name : ' +data[i].InternalName+ ' , Displayname : ' + data[i].DisplayName + ' , Required : ' + data[i].Required + ' , Type : ' + data[i].TypeDisplayname +  '<br>';
+                        text += '<table>';
+                        text += '   <tr>';
+                        text += '       <td>No</td>';
+                        text += '       <td>Internal Name</td>';
+                        text += '       <td>Display name</td>';
+                        text += '       <td>Type</td>';
+                        text += '       <td>Required</td>';
+                        text += '   </tr>';
+                        text += '   <tr>';
+                        text += '       <td>'+ count +') '+'</td>';
+                        text += '       <td>'+data[i].InternalName+'</td>';
+                        text += '       <td>'+ data[i].Title +'</td>';
+                        text += '       <td>'+ data[i].TypeDisplayname +'</td>';
+                        text += '       <td>'+ data[i].Required +'</td>';
+                        text += '   </tr>';
+                        text += '</table>';
+                
+                        
                     }
                     
                 }
