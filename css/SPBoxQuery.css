@@ -64,6 +64,11 @@ html,body{
 .ListTitle{
     cursor:pointer;
 }
+.ListTitle:hover{
+
+    background-color:lightgray;
+    color:white;
+}
 
 .ListTitle:active{
     background-color:gray;
