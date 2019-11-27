@@ -13,7 +13,7 @@ function GetColumn(){
             },
             success: function (data) {
                 data = data.d.results;
-                text = '<br>';
+                var text = '<br>';
                 var count = 0;
                 text += '<table>';
                 text += '   <tr>';
