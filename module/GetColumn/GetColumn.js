@@ -14,9 +14,12 @@ function GetColumn(){
             success: function (data) {
                 data = data.d.results;
                 text = '<br>';
+                var count = 0;
                 for(i in data){
-                    text += '<br>'+data[i].InternalName+ ': <br>'
+                    count = count+1;
+                    text += '<br>'+ count +') ' +data[i].InternalName+ ': <br>'
                     for(j in data[i]){
+                        debugger;
                         text += j+' : '+ data[i].j + '<br>'; 
                     }
                 }
