@@ -9,6 +9,7 @@
             LoadJS('GetList');
             LoadJS('GetAPI');
             LoadJS('SiteInfo');
+            LoadJS('GetColumn');
             $('#SiteTitle').text(SiteTitle);
 
             LoadJS('Initial');
