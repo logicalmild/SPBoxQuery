@@ -3,6 +3,7 @@ function SelectItem(mode){
     var list = $('#QueryInput').val();
     var process = false;
     var Query = '';
+    var text='';
     if(list){
         process = true;
         switch(mode){
@@ -42,7 +43,25 @@ function SelectItem(mode){
             success: function (data) 
             {      
                 data = data.d.results; 
-                extr_Data = data;
+                text+='<table>';
+                text+='<tr>';
+                for(i in data){
+                    debugger;
+                    text+='     <th>'+data[i]+'</th>';
+                }
+                
+                text+='</tr>';
+                text+='<tr>';
+                for(i in data){
+                    text+='     <td>Alfreds Futterkiste</td>';
+                }
+                text+='</tr>';
+                text+='</table>';
+                
+
+                    
+
+                
                 
             },
             error: function ajaxError(response) {
