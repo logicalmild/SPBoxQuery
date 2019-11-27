@@ -23,7 +23,7 @@ function SelectItem(mode){
         "accept": "application/json;odata=verbose"
         }
 
-    
+        debugger;
         $.ajax({
             url: requestUri,
             type: 'GET',
@@ -36,19 +36,19 @@ function SelectItem(mode){
                 text+='<table>';
                 text+='<tr>';
                 for(i in data){
-                    if(data[i].FromBaseType == false){
+                    // if(data[i].FromBaseType == false){
                         var col = '';
                         for(j in data[i]){
                             col = j;
                             text+='<th>'+col+'</th>';
                         }
                         break;
-                    }
+                    // }
                     
                 }  
                 text+='</tr>';             
                 for(i in data){
-                    if(data[i].FromBaseType == false){
+                    // if(data[i].FromBaseType == false){
                         text+='<tr>';
                         var d1 = data[i]
                         for(j in d1){
@@ -57,7 +57,7 @@ function SelectItem(mode){
                             
                         }
                         text+='</tr>';
-                    }
+                    // }
                     
                 }
                
