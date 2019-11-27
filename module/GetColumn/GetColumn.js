@@ -14,14 +14,14 @@ function GetColumn(){
             success: function (data) {
                 data = data.d.results;
                 text = JSON.stringify(data, null , 3);
-                text = text.replace(/"/g,'');
-                text = text.replace(/,/g,'<br>');
-                text = text.replace(/{/g,'');
-                text = text.replace(/}/g,'<br>');
-                text = text.replace(/:/g,'');
-                text = text.replace(/__deferred/g,'');
-                text = text.replace(/uri/g,'=>');
-                text = text.replace(/__metadata/g,'');
+                // text = text.replace(/"/g,'');
+                // text = text.replace(/,/g,'<br>');
+                // text = text.replace(/{/g,'');
+                // text = text.replace(/}/g,'<br>');
+                // text = text.replace(/:/g,'');
+                // text = text.replace(/__deferred/g,'');
+                // text = text.replace(/uri/g,'=>');
+                // text = text.replace(/__metadata/g,'');
                 $('#DisplayResult').append(text);
                 Writeline();
             },
@@ -33,7 +33,7 @@ function GetColumn(){
 
     }else{
         var str = 'Input list name';
-        $('#QueryInput').val(str);
+        $('#DisplayResult').append(str);
     }
 
 }
