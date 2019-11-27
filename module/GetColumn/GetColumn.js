@@ -21,7 +21,7 @@ function GetColumn(){
                     for(j in data[i]){
                         var field = data[i];
                         debugger;
-                        text += j+' : '+ field[j] + field.j+'<br>'; 
+                        text += j+' :&#09&#09 '+ field[j] +'<br>'; 
                     }
                 }
           
