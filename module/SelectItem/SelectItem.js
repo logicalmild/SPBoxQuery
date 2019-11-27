@@ -63,12 +63,8 @@ function SelectItem(mode){
                     debugger;
                     for(j in d1){
                         var d2 = d1[j];
-                        debugger;
-                        for(k in d2){
-                            var d3 = d2[k];
-                            debugger;
-                            text+='<td>'+d3+'</td>';
-                        }
+                        text+='<td>'+d2+'</td>';
+                        
                         
                     }
                     text+='</tr>';
