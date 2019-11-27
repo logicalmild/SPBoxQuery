@@ -12,6 +12,7 @@
             LoadJS('GetColumn');
             LoadJS('GetColumnDetail');
             LoadJS('SelectItem');
+            LoadJS('QueryItem');
             $('#SiteTitle').text(SiteTitle);
 
             LoadJS('Initial');
