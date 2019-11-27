@@ -11,10 +11,15 @@ function GetList(){
             data = data.d.results;
             var str='';
             for(i in data){
-                str+='<li onclick="$(\'#QueryInput\').val('+data[i].Title+');" class="ListTitle">'+data[i].Title+'</li>';
+                str+='<li onclick="SetQueryInput(this,'+data[i].Title+');" class="ListTitle">'+data[i].Title+'</li>';
             }
             $('#LeftPaneInfo').empty();
             $('#LeftPaneInfo').append(str);
         },            
     });
+
+    function SetQueryInput(elem,Listname){
+        $('#QueryInput').val(Listname);
+
+    }
 }
