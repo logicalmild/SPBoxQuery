@@ -18,7 +18,7 @@ function GetColumn(){
                 for(i in data){
                     if(data[i].FromBaseType == false){
                         count = count+1;
-                        text += '<br>'+ count +') ' +data[i].InternalName+ ': <br>'
+                        text += '<br>'+ count +') Name : ' +data[i].InternalName+ ' , Displayname : ' + data[i].DisplayName + ' , Required : ' + data[i].Required + ' , Type : ' + data[i].TypeDisplayname +  '<br>';
                     }
                     
                 }
