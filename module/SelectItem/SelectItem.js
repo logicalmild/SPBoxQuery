@@ -47,25 +47,16 @@ function SelectItem(mode){
                 
                 for(i in data){
                     text+='<tr>';
-                    for(j in data[i]){
-                        text+='<th>'+j+'</th>';
-                    }
+                    text+='<th>'+data[i]+'</th>';
                     text+='</tr>';
                     
-                }
-                
-                
-
-
-               
+                }               
                 for(i in data){
                     text+='<tr>';
                     var d1 = data[i]
-                    debugger;
                     for(j in d1){
                         var d2 = d1[j];
                         text+='<td>'+d2+'</td>';
-                        
                         
                     }
                     text+='</tr>';
