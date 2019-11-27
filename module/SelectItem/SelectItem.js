@@ -46,20 +46,20 @@ function SelectItem(mode){
                 text+='<table>';
                 text+='<tr>';
                 for(i in data){
-                    debugger;
-                    for(j in data[i]){
 
+                    for(j in data[i]){
+                        text+='<th>'+j+'</th>';
                     }
-                    text+='     <th>'+j+'</th>';
+                    
                 }
                 
                 text+='</tr>';
                 text+='<tr>';
                 for(i in data){
                     for(j in data[i]){
-
+                        text+='<td>'+data[i][j]+'</td>';
                     }
-                    text+='     <td>'+data[i][j]+'</td>';
+                    
                 }
                 text+='</tr>';
                 text+='</table>';
