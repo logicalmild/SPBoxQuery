@@ -16,7 +16,7 @@ function GetColumn(){
                 text = '<br>';
                 var count = 0;
                 for(i in data){
-                    if(data[i].FromBaseType == true){
+                    if(data[i].FromBaseType == false){
                         count = count+1;
                         text += '<br>'+ count +') ' +data[i].InternalName+ ': <br>'
                     }
