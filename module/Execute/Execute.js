@@ -1,26 +1,16 @@
-function SelectItem(mode){
-    
-    var list = $('#QueryInput').val();
-    var process = false;
-    var Query = '';
-    var text='';
-    if(list){
-        process = true;
-        Query = '?$select=*&$top=100';
-            
+function Execute(){
+
+    var Query = $('#QueryInput').val();
+    if(!Query){
+        var err = 'Command is not found';
+        err = '<p style="color:red;">'+err+'</p>';
+        $('#DisplayResult').append(err);
     }else{
-        $('#DisplayResult').append('<br>Input List name<br>');
-    }
-
-    
-
-    if(process == true){
-        var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('"+list+"')/items" + Query;
-        $('#QueryInput').val(requestUri);
+        var text='';
+        var requestUri = Query;
         var requestHeaders = {
         "accept": "application/json;odata=verbose"
         }
-
     
         $.ajax({
             url: requestUri,
@@ -57,19 +47,13 @@ function SelectItem(mode){
                 
                 $('#DisplayResult').append(text);
                     
-
-                
-                
             },
             error: function ajaxError(response) {
-                console.log(response.status + ' ' + response.statusText);
+                var err = response.status + ' ' + response.statusText;
+                err = '<p style="color:red;">'+err+'</p>';
+                $('#DisplayResult').append(err);
             }
         });
-    
-   
     }
-
-
-    
 
 }

@@ -13,6 +13,7 @@
             LoadJS('GetColumnDetail');
             LoadJS('SelectItem');
             LoadJS('QueryItem');
+            LoadJS('Execute');
             $('#SiteTitle').text(SiteTitle);
 
             LoadJS('Initial');
