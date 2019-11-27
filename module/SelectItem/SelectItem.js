@@ -37,23 +37,29 @@ function SelectItem(mode){
                 text+='<table>';
                 text+='<tr>';
                 for(i in data){
-                    var col = '';
-                    for(j in data[i]){
-                        col = j;
-                        text+='<th>'+col+'</th>';
+                    if(data[i].FromBaseType == false){
+                        var col = '';
+                        for(j in data[i]){
+                            col = j;
+                            text+='<th>'+col+'</th>';
+                        }
+                        break;
                     }
-                    break;
+                    
                 }  
                 text+='</tr>';             
                 for(i in data){
-                    text+='<tr>';
-                    var d1 = data[i]
-                    for(j in d1){
-                        var d2 = d1[j];
-                        text+='<td>'+d2+'</td>';
-                        
+                    if(data[i].FromBaseType == false){
+                        text+='<tr>';
+                        var d1 = data[i]
+                        for(j in d1){
+                            var d2 = d1[j];
+                            text+='<td>'+d2+'</td>';
+                            
+                        }
+                        text+='</tr>';
                     }
-                    text+='</tr>';
+                    
                 }
                
                 text+='</table>';
