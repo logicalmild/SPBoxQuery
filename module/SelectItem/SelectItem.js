@@ -57,6 +57,7 @@ function SelectItem(mode){
                 text+='<tr>';
                 for(i in data){
                     for(j in data[i]){
+                        debugger;
                         text+='<td>'+data[i][j]+'</td>';
                     }
                     
