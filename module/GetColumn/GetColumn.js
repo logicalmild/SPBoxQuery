@@ -14,7 +14,13 @@ function GetColumn(){
             success: function (data) {
                 data = data.d.results;
                 text = '<br>';
-                debugger;
+                for(i in data){
+                    text += '<br>'+data[i].InternalName+ ': <br>'
+                    for(j in data[i]){
+                        text += j+' : '+ data[i].j + '<br>'; 
+                    }
+                }
+          
                 // text = JSON.stringify(data, null , 3);
                 // text = text.replace(/"/g,'');
                 // text = text.replace(/,/g,'<br>');
