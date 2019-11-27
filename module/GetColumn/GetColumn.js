@@ -19,8 +19,9 @@ function GetColumn(){
                     count = count+1;
                     text += '<br>'+ count +') ' +data[i].InternalName+ ': <br>'
                     for(j in data[i]){
+                        var field = data[i];
                         debugger;
-                        text += j+' : '+ data[i].j + '<br>'; 
+                        text += j+' : '+ field[j] + field.j+'<br>'; 
                     }
                 }
           
