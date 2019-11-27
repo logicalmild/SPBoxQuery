@@ -49,8 +49,9 @@ function SelectItem(mode){
                     var col = '';
                     for(j in data[i]){
                         col = j;
+                        text+='<th>'+col+'</th>';
                     }
-                    text+='<th>'+col+'</th>';
+                    break;
                 }  
                 text+='</tr>';             
                 for(i in data){
