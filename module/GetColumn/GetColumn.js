@@ -24,7 +24,7 @@ function GetColumn(){
                 // text = text.replace(/uri/g,'=>');
                 // text = text.replace(/__metadata/g,'');
                 $('#DisplayResult').append(text);
-                Writeline();
+                // Writeline();
             },
             error: function(err){
                 $('#DisplayResult').append('<br> List ' + command + ' is not found.');
