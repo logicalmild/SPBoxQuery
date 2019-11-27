@@ -20,14 +20,14 @@ function GetColumn(){
                 text = text.replace(/{/g,'');
                 text = text.replace(/}/g,'<br>');
                 text = text.replace(/:/g,'');
-                text = text.replace(/__deferred/g,'');
-                text = text.replace(/uri/g,'=>');
-                text = text.replace(/__metadata/g,'');
+                // text = text.replace(/__deferred/g,'');
+                // text = text.replace(/uri/g,'=>');
+                // text = text.replace(/__metadata/g,'');
                 $('#DisplayResult').append(text);
                 Writeline();
             },
             error: function(err){
-                $('#DisplayResult').append('List ' + command + ' is not found.');
+                $('#DisplayResult').append('<br> List ' + command + ' is not found.');
             }            
         });
 

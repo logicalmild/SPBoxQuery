@@ -10,6 +10,7 @@
             LoadJS('GetAPI');
             LoadJS('SiteInfo');
             LoadJS('GetColumn');
+            LoadJS('SelectItem');
             $('#SiteTitle').text(SiteTitle);
 
             LoadJS('Initial');
