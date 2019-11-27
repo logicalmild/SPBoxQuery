@@ -54,8 +54,11 @@ function SelectItem(mode){
                 }
                 
                 text+='</tr>';
-                text+='<tr>';
+
+
+               
                 for(i in data){
+                    text+='<tr>';
                     var d1 = data[i]
                     for(j in d1){
                         var d2 = d1[j];
@@ -65,9 +68,9 @@ function SelectItem(mode){
                         }
                         
                     }
-                    
+                    text+='</tr>';
                 }
-                text+='</tr>';
+               
                 text+='</table>';
                 
                 $('#DisplayResult').append(text);
