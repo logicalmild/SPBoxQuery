@@ -47,18 +47,24 @@ function SelectItem(mode){
                 text+='<tr>';
                 for(i in data){
                     debugger;
-                    text+='     <th>'+data[i]+'</th>';
+                    for(j in data[i]){
+
+                    }
+                    text+='     <th>'+j+'</th>';
                 }
                 
                 text+='</tr>';
                 text+='<tr>';
                 for(i in data){
-                    text+='     <td>Alfreds Futterkiste</td>';
+                    for(j in data[i]){
+
+                    }
+                    text+='     <td>'+data[i][j]+'</td>';
                 }
                 text+='</tr>';
                 text+='</table>';
                 
-
+                $('#DisplayResult').append(text);
                     
 
                 
