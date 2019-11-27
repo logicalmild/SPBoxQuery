@@ -16,8 +16,11 @@ function GetColumn(){
                 text = '<br>';
                 var count = 0;
                 for(i in data){
-                    count = count+1;
-                    text += '<br>'+ count +') ' +data[i].InternalName+ ': <br>'
+                    if(data[i].FromBaseType == true){
+                        count = count+1;
+                        text += '<br>'+ count +') ' +data[i].InternalName+ ': <br>'
+                    }
+                    
                 }
                 $('#DisplayResult').append(text);
                 // Writeline();
