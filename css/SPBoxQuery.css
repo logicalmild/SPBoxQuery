@@ -60,3 +60,9 @@ html,body{
 #LeftPaneControl{
     margin-bottom:10px;
 }
+
+.ListTitle:hover{
+    background-color:gray;
+    color:white;
+    
+}
