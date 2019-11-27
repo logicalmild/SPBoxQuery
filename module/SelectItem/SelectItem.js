@@ -14,12 +14,7 @@ function SelectItem(mode){
             case 100:
                         Query = '?$select=*&$top=100';
                         break;
-            case 1000:
-                        Query = '?$select=*&$top=1000';
-                        break;
-            case 10000:
-                        Query = '?$select=*&$top=10000';
-                        break;
+
         }
     }else{
         $('#DisplayResult').append('<br>Input List name<br>');
