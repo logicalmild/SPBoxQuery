@@ -24,19 +24,19 @@ function Execute(){
                 text+='<table>';
                 text+='<tr>';
                 for(i in data){
-                    if(data[i].FromBaseType == false){
+                    
                         var col = '';
                         for(j in data[i]){
                             col = j;
                             text+='<th>'+col+'</th>';
                         }
                         break;
-                    }
+                    
                     
                 }  
                 text+='</tr>';             
                 for(i in data){
-                    if(data[i].FromBaseType == false){
+                    
                         text+='<tr>';
                         var d1 = data[i]
                         for(j in d1){
@@ -45,7 +45,7 @@ function Execute(){
                             
                         }
                         text+='</tr>';
-                    }
+                    
                     
                 }
                

@@ -34,10 +34,12 @@ function GetColumnDetail(){
                 // text = text.replace(/__deferred/g,'');
                 // text = text.replace(/uri/g,'=>');
                 // text = text.replace(/__metadata/g,'');
+                $('#DisplayResult').empty();
                 $('#DisplayResult').append(text);
                 // Writeline();
             },
             error: function(err){
+                $('#DisplayResult').empty();
                 $('#DisplayResult').append('<br> List ' + command + ' is not found.');
             }            
         });
@@ -45,6 +47,7 @@ function GetColumnDetail(){
 
     }else{
         var str = 'Input list name';
+        $('#DisplayResult').empty();
         $('#DisplayResult').append(str);
     }
 

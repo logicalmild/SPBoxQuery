@@ -11,6 +11,7 @@ function SelectItem(mode){
     }else{
         var str = 'Please input list name.';
         str = '<p style="color:red;">'+str+'</p>';
+        $('#DisplayResult').empty();
         $('#DisplayResult').append(str);
     }
 
@@ -63,7 +64,7 @@ function SelectItem(mode){
                 }
                
                 text+='</table>';
-                
+                $('#DisplayResult').empty();
                 $('#DisplayResult').append(text);
                     
 

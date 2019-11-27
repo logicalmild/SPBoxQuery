@@ -37,10 +37,12 @@ function GetColumn(){
                     
                 }
                 text += '</table>';
+                $('#DisplayResult').empty();
                 $('#DisplayResult').append(text);
                 // Writeline();
             },
             error: function(err){
+                $('#DisplayResult').empty();
                 $('#DisplayResult').append('<br> List ' + command + ' is not found.');
             }            
         });
@@ -48,6 +50,7 @@ function GetColumn(){
 
     }else{
         var str = 'Input list name';
+        $('#DisplayResult').empty();
         $('#DisplayResult').append(str);
     }
 
