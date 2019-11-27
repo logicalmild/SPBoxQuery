@@ -16,9 +16,9 @@ function GetColumn(){
                 text = '<br>';
                 text = JSON.stringify(data, null , 3);
                 // text = text.replace(/"/g,'');
-                text = text.replace(/,/g,'<br>');
+                // text = text.replace(/,/g,'<br>');
                 // text = text.replace(/{/g,'');
-                text = text.replace(/}/g,'<br>');
+                // text = text.replace(/}/g,'<br>');
                 // text = text.replace(/:/g,'');
                 // text = text.replace(/__deferred/g,'');
                 // text = text.replace(/uri/g,'=>');
