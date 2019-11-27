@@ -10,7 +10,7 @@ function SelectItem(mode){
             
     }else{
         var str = 'Please input list name.';
-        str += '<p style="color:red;">'+str+'</p>';
+        str = '<p style="color:red;">'+str+'</p>';
         $('#DisplayResult').append(str);
     }
 
