@@ -9,13 +9,14 @@ function SelectItem(mode){
         Query = '?$select=*&$top=100';
             
     }else{
-        $('#DisplayResult').append('<br>Input List name<br>');
+        
     }
 
     
 
     if(process == true){
         var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('"+list+"')/items" + Query;
+        $('#QueryInput').val('');
         $('#QueryInput').val(requestUri);
         var requestHeaders = {
         "accept": "application/json;odata=verbose"
