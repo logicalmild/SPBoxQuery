@@ -63,8 +63,8 @@ function SelectItem(mode){
                     for(j in d1){
                         var d2 = d1[j];
                         for(k in d2){
-                            // var d3 = d2[k];
-                            text+='<td>'+k+'</td>';
+                            var d3 = d2[k];
+                            text+='<td>'+d3+'</td>';
                         }
                         
                     }
